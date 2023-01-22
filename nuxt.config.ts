@@ -2,8 +2,8 @@
 export default defineNuxtConfig({
     runtimeConfig: {
         // The private keys which are only available within server-side
-        dbUrl: "123",
-        jwtKey: "123",
+        dbUrl: process.env.DB_URL,
+        jwtKey: process.env.JWT_KEY,
         // Keys within public, will be also exposed to the client-side
       }
 })

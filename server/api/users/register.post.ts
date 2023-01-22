@@ -4,6 +4,17 @@ import { userRepository } from "~~/server/database/repositories/user.repository"
 import { initialize } from "~~/server/database/data-source"
 
 export default defineEventHandler(async(event)=>{
+
+    console.log(event.context.auth)
+
+    if(!event.context.auth.auth || !event.context.auth.isAdmin){
+        
+        throw createError({
+            statusCode:403,
+            statusMessage:'No esta autenticado'
+        })
+    }
+
     await initialize()
     
     const body = await readBody<UserDto>(event)
