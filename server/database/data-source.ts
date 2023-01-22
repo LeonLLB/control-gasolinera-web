@@ -1,12 +1,14 @@
 import "reflect-metadata"
 import { DataSource } from "typeorm"
+import { Distribucion } from "./entities/distribucion.entity"
 import { Usuario } from "./entities/user.entity"
 
 const AppDataSource = new DataSource({
     type: "postgres",
     url: process.env.DB_URL,
     entities: [
-        Usuario
+        Usuario,
+        Distribucion
     ],
     synchronize: true,
 })
