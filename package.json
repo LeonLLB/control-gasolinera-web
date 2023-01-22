@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "tw:dev": "tailwindcss -i ./tw.css -o ./styles.css --watch"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "nuxt": "3.0.0",
+    "tailwindcss": "^3.2.4"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "jsonwebtoken": "^9.0.0",
+    "pg": "^8.8.0",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.11"
+  }
+}
