@@ -5,3 +5,8 @@ export class UserDto{
     password!: string
     isAdmin = false
 }
+
+export class LoginDto{
+    cedula!:number
+    password!:string
+}
